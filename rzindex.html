@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector Cliente</title>
+    <link rel="stylesheet" href="estilorz.css">
+    <script src="codigo.js"></script>
+</head>
+<body onload="modelo()">
+    <div class="contenedorrz1">
+        <h1>Cotización de servicios</h1>
+
+        <h3>Vehículo</h3>
+
+        <p>Marca:
+            <select id="Marca" onchange="modelo()">
+                <option value="audi">AUDI</option>
+                <option value="volkswagen">VOLKSWAGEN</option>
+                <option value="renault">RENAULT</option>
+                <option value="bmw">BMW</option>
+                <option value="peugeot">PEUGEOT</option>
+            </select>
+        </p>
+
+        <p>Modelo:
+            <select id="modelo">
+                <option value="">Seleccionar modelo</option>
+            </select>
+        </p>
+
+        <p>Modificación:
+            <select id="Modificacion">
+                <option value="1">Stage 1</option>
+                <option value="2">Stage 2</option>
+                <option value="3">Stage 3</option>
+                <option value="4">DPF OFF / EGR OFF</option>
+                <option value="5">Escape</option>
+            </select>
+        </p>
+
+        <button onclick="cotizar()">COTIZAR</button>
+        <p id="resultadocoti"></p>
+
+        <h3>Solicitar turno</h3>
+        <p>Completá los siguientes datos para solicitar un turno.</p>
+
+        <p>Nombre: <input type="text" id="Nombre" placeholder="Indique su nombre"> </p>
+        <p>Apellido: <input type="text" id="Apellido" placeholder="Indique su apellido"></p>
+        <p>Teléfono: <input type="number" id="telefono" placeholder="Indique su teléfono"></p>
+        <p>Email: <input type="email" id="Email" placeholder="Indique su email"></p>
+        <p>DNI: <input type="number" id="DNI" placeholder="Indique su DNI"></p>
+
+        <button class="button1" onclick="solicitarTurno()">SOLICITAR TURNO</button>
+    </div>
+
+    <button class="volver" onclick="volver()">VOLVER</button>
+</body>
+</html>
