@@ -59,23 +59,24 @@ function modelo() {
 }
 
 function cotizar() {
-    var modificacion = document.getElementById("Modificacion").value;
-    var resultado = document.getElementById("resultadocoti");
-    var precio = 0;
+       var modificacion = document.getElementById("Modificacion").value;
+
 
     if (modificacion == "1") {
-        precio = 700;
-    } else if (modificacion == "2") {
-        precio = 1200;
-    } else if (modificacion == "3") {
-        precio = 1800;
-    } else if (modificacion == "4") {
-        precio = 600;
-    } else if (modificacion == "5") {
-        precio = 900;
+        document.getElementById("resultadocoti").textContent = "USD 600";
     }
-
-    resultado.innerHTML = "USD " + precio;
+    if (modificacion == "2" ) {
+        document.getElementById("resultadocoti").textContent = "USD 800";
+    }
+    if (modificacion == "3") {
+        document.getElementById("resultadocoti").textContent = "USD 1600";
+    }
+    if (modificacion == "4") {
+        document.getElementById("resultadocoti").textContent = "USD 700";
+    }
+    if (modificacion == "5" ) {
+        document.getElementById("resultadocoti").textContent = "USD 900";
+    }
 }
 
 function solicitarTurno() {
